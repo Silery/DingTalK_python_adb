@@ -1,34 +1,37 @@
 import os
 import time
 x = 0
+#输入手机号和密码 
+#注：所有账号都需要在手机上手动登录一遍才可以开始批量打卡，首次登陆需要验证，保存会话
+#改脚本适合多账号自动打卡，不适合个人使用，望合理利用。
 dict_user =[
-            {"username":"13606586792","passwd":"gmh123.0"},
+            {"username":"phone number","passwd":"password"},
            ]
 
 
 
 #点击
 def click(x,y):
-    time.sleep(0.5)
+    time.sleep(0.2)
     os.system('adb shell input tap {x} {y}'.format(x=x,y=y))
-    time.sleep(0.5)
+    time.sleep(0.2)
 #左滑
 def swipe_left():
     os.system('adb shell input swipe 700 1400 900 1400')
-    time.sleep(0.5)
+    time.sleep(0.2)
 def swipe_up(x1,y1,x2,y2):
-    time.sleep(0.5)
+    time.sleep(0.2)
     os.system('adb shell input swipe {x1} {y1} {x2} {y2}'.format(x1=x1,y1=y1,x2=x2,y2=y2))
-    time.sleep(0.5)
+    time.sleep(0.2)
 #右滑
 def swipe_right():
     os.system('adb shell input swipe 900 1400 700 1400')
-    time.sleep(0.5)
+    time.sleep(0.2)
 def input(txt):
 
-    time.sleep(0.5)
+    time.sleep(0.2)
     os.system('adb shell input text {}'.format(txt))
-    time.sleep(0.5)
+    time.sleep(0.2)
 
 # username  = r"13606586792"
 passwd = "gmh123.0"
