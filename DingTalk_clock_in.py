@@ -33,8 +33,7 @@ def input(txt):
     os.system('adb shell input text {}'.format(txt))
     time.sleep(0.2)
 
-# username  = r"13606586792"
-passwd = "gmh123.0"
+#我的钉钉放在第二页倒数第三行第四列。可以自己更改。
 swipe_right()
 #打开钉钉
 print("打开钉钉")
